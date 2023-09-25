@@ -22,7 +22,7 @@ const Navbar = () => {
     return(
         <nav className="w-full top-0 flex flex-1 justify-between items-center px-14 py-5 shadow-md bg-blur">
             <div>
-                <a href={"/"} className="px-3 py-1 border-4 border-black text-md font-bold">
+                <a href={"/"} className="px-3 py-1 border-4 border-black text-md font-bold text-[#64ffda]">
                     R.B
                 </a>
             </div>
