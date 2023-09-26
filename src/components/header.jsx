@@ -11,7 +11,7 @@ const Hero = () => {
             I'm a junior front-end web debeloper specializing in building
             (and designing) exceptional web interfaces using ReactJS.
             </p>
-            <a href={Resume} download className="px-5 py-3 text-lg text-sky-300 rounded border border-sky-300 font-work hover:bg-sky-400/20 transition-all">Download My Resume</a>
+            <a href={Resume} download className="px-5 py-3 text-lg text-sky-300 rounded border border-sky-300 font-work hover:border-4 transition-all">Download My Resume</a>
         </>
     )
 }

@@ -107,7 +107,7 @@ const Nav = () => {
                                     href={Resume}
                                     download
                                     className="flex flex-1 justify-center px-5 py-3 text-sm w-4/6 mx-auto text-sky-300 rounded border border-sky-300 
-                            font-work hover:bg-sky-400/20 transition-all items-center"
+                                                font-work hover:bg-sky-400/20 transition-all items-center"
                                 >
                                     Resume <HiDownload className="ml-2" />
                                 </a>
