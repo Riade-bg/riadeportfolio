@@ -15,7 +15,7 @@ const About = () => {
                     text-2xl md:text-3xl text-gray-200 mb-10">
                     <span className="md:text-xl text-sky-500 font-mono mr-5">01.</span> About Me
                 </h1>
-                <div className="text-[#a8b2d1] text-base">
+                <div className="text-[#ccd6f6] text-base">
                     <p className="text-center md:text-start mb-6 leading-relaxed font-poppins">
                         Hello! My name is Riade and I enjoy creating things that live on the internet. My interest in front-end web development started back in 2012 when I decided to try editing custom templates — turns out inspecting a custom reblog button taught me a lot about HTML & CSS!
                         Fast-forward to today, and I've had the privilege of working as a <span className="text-sky-500 font-bold">freelance developer and a developer at student-organization in my university as front-end web developer. </span>  My main focus these days is building accessible, inclusive front-end interfaces and digital experiences for a variety of clients.

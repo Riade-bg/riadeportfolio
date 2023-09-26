@@ -13,19 +13,19 @@ import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
     const [menu, setMenu] = useState(false);
+    const [darkMode, setDarkMode] = useState(true)
     const router = useRouter()
     const { setTheme } = useTheme()
     return (
         <>
-            <nav className="w-full top-0 flex flex-1 justify-between items-center px-10 py-5 shadow fixed backdrop-blur">
-                <div>
-                    <h1 onClick={() => router.push("/")} className="px-3 py-1 transition  
-                    border-4 hover:border-sky-500 hover:text-sky-500 
+            <nav className="w-full top-0 flex flex-1 justify-between items-center px-24 py-5 shadow fixed backdrop-blur">
+                <div className='border-blue-500 transition-ll border-2'>
+                    <h1 onClick={() => router.push("/")} className="px-3 py-1 transition hover:text-blue-500 
                     text-lg font-bold cursor-pointer">
-                        R
+                        RIADE
                     </h1>
                 </div>
-                <ul className="flex text-gray-300 text-sm font-work items-center">
+                <ul className="flex dark:text-gray-300 text-sm font-mono items-center">
                     {[
                         {
                             index: "01.",
@@ -43,37 +43,47 @@ const Navbar = () => {
                         <li
                             key={index}
                             onClick={() => router.push(`#${item.link}`)}
-                            className="cursor-pointer font-fira hover:text-[#64ffda] mr-10 capitalize hidden md:flex items-center transition-all"
+                            className="cursor-pointer hover:text-blue-500 mr-10 capitalize hidden md:flex items-center transition-all"
                         >
-                            <span className="text-[#64ffda] mr-1">
+                            <span className="text-blue-500 mr-1">
                                 {item.index}
                             </span>
                             <p>{item.link}</p>
                         </li>
                     ))}
                     <li>
-                        <a
-                            href={"/"}
-                            download
-                            className="hidden md:flex px-5 py-2 text-sm text-[#64ffda] rounded-none border border-[#64ffda] 
-                            font-work hover:bg-sky-400/20 transition-all items-center"
+                        <Button variant={"outline"}
+                            className="hidden md:flex px-5 py-2 text-sm text-blue-500 rounded-none border border-blue-500 
+                            font-work hover:bg-blue-500/20 transition-all items-center"
                         >
                             Resume
                             {/* <span>
                                 <HiDownload />
                             </span> */}
-                        </a>
+                        </Button>
                     </li>
                     <li>
-                    <Button variant="outline" className='ml-3 text-black' size="icon" onClick={() => setTheme("light")}>
-                        <BsSun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                    </Button>
-                    <Button variant="outline" className='ml-3' size="icon" onClick={() => setTheme("dark")}>
-                        <MdOutlineDarkMode className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                    </Button>
+                        <div className='bg-red-100 flex items-center ml-3'>
+                            {darkMode && (
+                                <Button variant="secondary" className='text-black border rounded-none' size="icon" onClick={() => {
+                                    setTheme("light"),
+                                    setDarkMode(false)
+                                }}>
+                                    <BsSun className="text-white h-[1.2rem] w-[1.2rem] transition-all" />
+                                </Button>
+                            )}
+                            {!darkMode && (
+                                <Button variant="secondary" className='rounded-none' size="icon" onClick={() => {
+                                    setTheme("dark")
+                                    setDarkMode(true)
+                                }}>
+                                    <MdOutlineDarkMode className="absolute h-[1.2rem] w-[1.2rem] transition-all" />
+                                </Button>
+                            )}
+                        </div>
                     </li>
                     <li
-                        className="md:hidden text-white text-lg p-2 cursor-pointer rounded-md bg-sky-700/80"
+                        className="md:hidden text-white text-lg p-2 cursor-pointer rounded-md bg-blue-700/80"
                         onClick={() => setMenu(true)}
                     >
                         {/* <HiMenu /> */}
@@ -91,7 +101,7 @@ const Navbar = () => {
                     >
                         <ul className="px-5 right-0 text-gray-300 text-2xl relative w-9/12 h-full w-full bg-[#09192e] flex flex-col items-center justify-center font-work">
                             <li
-                                className="text-2xl absolute top-2 right-7 cursor-pointer top-0 p-1 m-4 bg-sky-700/80 flex justify-end text-white rounded-md"
+                                className="text-2xl absolute top-2 right-7 cursor-pointer top-0 p-1 m-4 bg-blue-700/80 flex justify-end text-white rounded-md"
                                 onClick={() => setMenu(false)}
                             >
                                 <AiOutlineClose />
@@ -115,7 +125,7 @@ const Navbar = () => {
                                     className="mb-5 capitalize flex flex-col items-center transition-all"
                                     onClick={() => setMenu(false)}
                                 >
-                                    <span className="text-sky-500 text-base">
+                                    <span className="text-blue-500 text-base">
                                         {item.index}
                                     </span>
                                     <a href={`#${item.link}`}>{item.link}</a>
@@ -125,8 +135,8 @@ const Navbar = () => {
                                 <a
                                     href={"/"}
                                     download
-                                    className="flex flex-1 justify-center px-5 py-3 text-sm w-4/6 mx-auto text-sky-300 rounded border border-sky-300 
-                                                font-work hover:bg-sky-400/20 transition-all items-center"
+                                    className="flex flex-1 justify-center px-5 py-3 text-sm w-4/6 mx-auto text-blue-300 rounded border border-blue-300 
+                                                font-work hover:bg-blue-400/20 transition-all items-center"
                                 >
                                     {/* Resume <HiDownload className="ml-2" /> */}
                                 </a>
