@@ -1,5 +1,3 @@
-"use client";
-
 import { motion, useScroll } from "framer-motion"
 import { useRef } from "react"
 
@@ -73,3 +71,4 @@ const Work = () => {
 }
 
 export default Work
+>>>>>>> 7db7083146407d3c3ebc752037f239d0cbad6fc0
