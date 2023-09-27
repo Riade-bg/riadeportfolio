@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Header from "./components/header/header";
 import Navbar from "./components/navbar/navbar";
 import About from "./components/about/about";
+import Work from "./components/portfolio/work";
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <Navbar />
       <Header />
       <About />
+      <Work />
     </motion.div>
     </AnimatePresence>
   )

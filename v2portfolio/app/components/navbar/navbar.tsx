@@ -22,7 +22,7 @@ const Navbar = () => {
                 <div className='border-blue-500 transition-ll border-2'>
                     <h1 onClick={() => router.push("/")} className="px-3 py-1 transition hover:text-blue-500 
                     text-lg font-bold cursor-pointer">
-                        RIADE
+                        R
                     </h1>
                 </div>
                 <ul className="flex dark:text-gray-300 text-sm font-mono items-center">

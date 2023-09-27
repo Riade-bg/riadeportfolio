@@ -23,7 +23,7 @@ const Header = () => {
             </div>
         </div>
         <div className="h-1/2 fixed flex flex-col top-[50%] left-14 
-        after:absolute after:h-20 after:w-[0.5px] after:bg-white after:bottom-0 after:left-3">
+        after:absolute after:h-20 after:w-1 after:w-[0.5px] after:bg-blue-500 after:bottom-0 after:left-3">
             <p className="hover:text-blue-500 transition-all cursor-pointer mb-5">
                 <AiFillGithub size={26} />
             </p>
@@ -32,7 +32,7 @@ const Header = () => {
             </p>
         </div>
         <div className="h-1/2 fixed flex flex-col top-[50%] right-0 font-mono
-        after:absolute after:h-20 after:w-[0.5px] after:bg-white after:bottom-0 after:right-28">
+        after:absolute after:h-20 after:w-[0.5px] after:bg-blue-500 after:w-1 after:bottom-0 after:right-[100px]">
             <p className="hover:text-blue-500 text-sm transition-all cursor-pointer rotate-90">
                 riadeboughaba<span className="text-blue-700 mx-1">@</span>gmail.com
             </p>
