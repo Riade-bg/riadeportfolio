@@ -5,6 +5,7 @@ import {AnimatePresence, motion} from 'framer-motion'
 import {AiOutlineClose} from 'react-icons/ai'
 import {BsSun} from 'react-icons/bs'
 import {MdOutlineDarkMode} from 'react-icons/md'
+import {HiDownload, HiMenu} from 'react-icons/hi'
 
 import { useRouter } from 'next/navigation';
 import { useTheme } from 'next-themes';
@@ -57,9 +58,9 @@ const Navbar = () => {
                             font-work hover:bg-blue-500/20 transition-all items-center"
                         >
                             Resume
-                            {/* <span>
+                            <span className='ml-2'>
                                 <HiDownload />
-                            </span> */}
+                            </span>
                         </Button>
                     </li>
                     <li>
@@ -83,10 +84,10 @@ const Navbar = () => {
                         </div>
                     </li>
                     <li
-                        className="md:hidden text-white text-lg p-2 cursor-pointer rounded-md bg-blue-700/80"
+                        className="md:hidden text-white p-2 cursor-pointer ml-2"
                         onClick={() => setMenu(true)}
                     >
-                        {/* <HiMenu /> */}
+                        <HiMenu size={30} />
                     </li>
                 </ul>
             </nav>
@@ -138,7 +139,7 @@ const Navbar = () => {
                                     className="flex flex-1 justify-center px-5 py-3 text-sm w-4/6 mx-auto text-blue-300 rounded border border-blue-300 
                                                 font-work hover:bg-blue-400/20 transition-all items-center"
                                 >
-                                    {/* Resume <HiDownload className="ml-2" /> */}
+                                    Resume <HiDownload className="ml-2" />
                                 </a>
                             </li>
                         </ul>
