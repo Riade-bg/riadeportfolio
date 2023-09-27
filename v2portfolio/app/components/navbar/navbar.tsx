@@ -18,7 +18,7 @@ const Navbar = () => {
   const { setTheme } = useTheme();
   return (
     <>
-      <nav className="w-full top-0 flex flex-1 justify-between items-center px-24 py-5 shadow fixed backdrop-blur">
+      <nav className="z-10 w-full top-0 flex flex-1 justify-between items-center px-24 py-5 shadow fixed backdrop-blur">
         <div className="border-blue-500 transition-ll border-2">
           <h1
             onClick={() => router.push("/")}
