@@ -21,7 +21,7 @@ interface Data {
   description: string;
   link: string;
   _id: string;
-  imgUrl: string;
+  imageUrl: string;
   tags: string[];
 }
 
@@ -34,6 +34,7 @@ const Work = async () => {
   });
   const scrollProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
   const data: Data[] = await getProjects();
+  console.log(data);
 
   return (
     <motion.div
@@ -54,7 +55,7 @@ const Work = async () => {
           key={item._id}
           title={item.title}
           desc={item.description}
-          imgSrc={item.imgUrl}
+          imgSrc={item.imageUrl}
           tags={item.tags}
         />
       ))}
