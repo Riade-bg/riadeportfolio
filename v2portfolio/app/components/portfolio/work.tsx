@@ -54,7 +54,7 @@ const Work = async () => {
           key={item._id}
           title={item.title}
           desc={item.description}
-          imgSrc={item.imageUrl}
+          imgUrl={item.imageUrl}
           tags={item.tags}
         />
       ))}
