@@ -34,21 +34,20 @@ const Work = async () => {
   });
   const scrollProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
   const data: Data[] = await getProjects();
-  console.log(data);
 
   return (
     <motion.div
-      className="px-36 mt-20"
+      id="work"
+      className="px-5 md:px-36 mt-20 pt-10"
       ref={ref}
       style={{ opacity: scrollYProgress }}
     >
       <h1
-        className="flex items-end text-base light:text-[#0a192f]
-                    justify-start w-full font-fira mb-10
-                    md:text-3xl"
+        className="flex items-end md:text-start
+                        justify-start w-full font-mono
+                        text-3xl dark:text-blue-500 light:text-[#0a192f] mb-10"
       >
-        <span className="md:text-xl text-sky-500 font-mono mr-5">03.</span> My
-        Work
+        03. My Work
       </h1>
       {data.map(item => (
         <Projects

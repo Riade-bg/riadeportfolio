@@ -10,6 +10,8 @@ import { HiDownload, HiMenu } from "react-icons/hi";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-scroll/modules";
+import Headroom from "react-headroom";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
@@ -17,8 +19,8 @@ const Navbar = () => {
   const router = useRouter();
   const { setTheme } = useTheme();
   return (
-    <>
-      <nav className="z-10 w-full top-0 flex flex-1 justify-between items-center px-24 py-5 shadow fixed backdrop-blur">
+    <Headroom>
+      <nav className="z-10 w-full top-0 flex flex-1 justify-between items-center px-10 md:px-24 py-5 backdrop-blur">
         <div className="border-blue-500 transition-ll border-2">
           <h1
             onClick={() => router.push("/")}
@@ -32,24 +34,36 @@ const Navbar = () => {
           {[
             {
               index: "01.",
-              link: "About"
+              link: "About",
+              id: "about"
             },
             {
               index: "02.",
-              link: "Work"
+              link: "Work",
+              id: "work"
             },
             {
               index: "03.",
-              link: "Contact"
+              link: "Contact",
+              id: "contact"
             }
           ].map((item, index) => (
             <li
               key={index}
-              onClick={() => router.push(`#${item.link}`)}
               className="cursor-pointer hover:text-blue-500 mr-10 capitalize hidden md:flex items-center transition-all"
             >
-              <span className="text-blue-500 mr-1">{item.index}</span>
-              <p>{item.link}</p>
+              <Link
+                activeClass={"text-blue-500"}
+                to={item.id}
+                spy={true}
+                offset={50}
+                smooth={true}
+                duration={500}
+                className="flex"
+              >
+                <span className="text-blue-500 mr-1">{item.index}</span>
+                <p>{item.link}</p>
+              </Link>
             </li>
           ))}
           <li>
@@ -110,9 +124,9 @@ const Navbar = () => {
             transition={{ duration: 0.2 }}
             className="fixed right-0 top-0 bg-[#09192e]/50 backdrop-blur w-screen h-screen z-30 flex justify-end"
           >
-            <ul className="px-5 right-0 text-gray-300 text-2xl relative w-9/12 h-full w-full bg-[#09192e] flex flex-col items-center justify-center font-work">
+            <ul className="px-5 right-0 text-gray-300 text-2xl relative h-full w-full bg-[#09192e] flex flex-col items-center justify-center font-work">
               <li
-                className="text-2xl absolute top-2 right-7 cursor-pointer top-0 p-1 m-4 bg-blue-700/80 flex justify-end text-white rounded-md"
+                className="text-2xl absolute right-7 cursor-pointer top-0 p-1 m-4 bg-blue-700/80 flex justify-end text-white rounded-md"
                 onClick={() => setMenu(false)}
               >
                 <AiOutlineClose />
@@ -154,7 +168,7 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </Headroom>
   );
 };
 
