@@ -44,8 +44,8 @@ const About = () => {
             Here are technologies I've been working with recently:
           </p>
         </div>
-        <div className="flex justify-between">
-          <ul className="font-mono text-sm light:text-[#0a192f]">
+        <div className="flex justify-start">
+          <ul className="font-mono text-sm light:text-[#0a192f] mr-10">
             <li className='before:content-["▹"] mb-3 before:text-sky-500 before:w-10 before:h-24 before:mr-3'>
               JavaScript
             </li>
@@ -69,7 +69,7 @@ const About = () => {
           </ul>
         </div>
       </div>
-      <div className="w-full md:w-1/3 p-1 top-1/2 flex">
+      <div className="w-full md:w-1/3 p-1 top-1/2 flex justify-center">
         <img src={"https://placehold.co/400x400"} alt={"Profile"} />
       </div>
     </motion.div>
