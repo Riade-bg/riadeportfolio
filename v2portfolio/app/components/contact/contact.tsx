@@ -1,4 +1,6 @@
+import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Contact = () => {
   return (
@@ -18,6 +20,9 @@ const Contact = () => {
         Thanks for taking time to go through my Portfolio. If you wan't to
         cantact me, I will do my best to reply as soon as possible. Thank you!
       </p>
+      <Link href="mailto:riadeboughaba@gmail.com">
+        <Button>Contact</Button>
+      </Link>
     </motion.div>
   );
 };

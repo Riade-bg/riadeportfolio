@@ -52,11 +52,14 @@ const Header = () => {
         </div>
         <div
           className="h-1/2 fixed flex flex-col top-[50%] right-0 font-mono
-            after:absolute after:h-20 after:w-[0.5px] after:bg-blue-500 after:w-1 after:bottom-0 after:right-[100px]"
+            after:absolute after:h-20 after:bg-blue-500 after:w-1 after:bottom-0 after:right-[100px]"
         >
-          <p className="hover:text-blue-500 text-sm transition-all cursor-pointer rotate-90">
-            riadeboughaba<span className="text-blue-700 mx-1">@</span>gmail.com
-          </p>
+          <Link href="mailto:riadeboughaba@gmail.com">
+            <p className="hover:text-blue-500 text-sm transition-all cursor-pointer rotate-90">
+              riadeboughaba<span className="text-blue-700 mx-1">@</span>
+              gmail.com
+            </p>
+          </Link>
         </div>
       </div>
     </>

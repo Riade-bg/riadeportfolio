@@ -1,7 +1,6 @@
-"use client";
-
 import { AiFillGithub } from "react-icons/ai";
 import { FiExternalLink } from "react-icons/fi";
+import Link from "next/link";
 
 import React from "react";
 import { useRouter } from "@/node_modules/next/navigation";
@@ -77,16 +76,20 @@ const Projects: React.FC<ProjectsProps> = ({
           ))}
         </ul>
         <div className="flex md:m-4 dark:text-[#e6f1ff] cursor-pointer hover:text-blue-500">
-          <FiExternalLink
-            className={"mr-4"}
-            onClick={() => router.push(link)}
-            size={24}
-          />
-          <AiFillGithub
-            className={""}
-            onClick={() => router.push(github)}
-            size={24}
-          />
+          <Link href={link} target="_blank">
+            <FiExternalLink
+              className={"mr-4"}
+              onClick={() => router.push(link)}
+              size={24}
+            />
+          </Link>
+          <Link href={github} target="_blank">
+            <AiFillGithub
+              className={""}
+              onClick={() => router.push(github)}
+              size={24}
+            />
+          </Link>
         </div>
       </div>
     </div>

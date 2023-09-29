@@ -122,11 +122,11 @@ const Navbar = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed right-0 top-0 bg-[#09192e]/50 backdrop-blur w-screen h-screen z-30 flex justify-end"
+            className="fixed right-0 top-0 dark:bg-[#09192e] backdrop-blur w-screen h-screen z-30 flex justify-end"
           >
             <ul className="px-5 right-0 text-gray-300 text-2xl relative h-full w-full bg-[#09192e] flex flex-col items-center justify-center font-work">
               <li
-                className="text-2xl absolute right-7 cursor-pointer top-0 p-1 m-4 bg-blue-700/80 flex justify-end text-white rounded-md"
+                className="text-2xl absolute right-7 cursor-pointer top-0 p-1 m-4 bg-[#0a192f] flex justify-end text-white"
                 onClick={() => setMenu(false)}
               >
                 <AiOutlineClose />
@@ -147,7 +147,7 @@ const Navbar = () => {
               ].map((item, index) => (
                 <li
                   key={index}
-                  className="mb-5 capitalize flex flex-col items-center transition-all"
+                  className="mb-5 hover:text-blue-500 text-mono capitalize flex flex-col items-center transition-all"
                   onClick={() => setMenu(false)}
                 >
                   <span className="text-blue-500 text-base">{item.index}</span>
@@ -155,14 +155,16 @@ const Navbar = () => {
                 </li>
               ))}
               <li className="w-full">
-                <a
-                  href={"/"}
-                  download
-                  className="flex flex-1 justify-center px-5 py-3 text-sm w-4/6 mx-auto text-blue-300 rounded border border-blue-300 
-                                                font-work hover:bg-blue-400/20 transition-all items-center"
+                <Button
+                  className="mx-auto flex px-5 py-2 text-sm text-white rounded-none border border-blue-500 
+                                  font-work bg-blue-500 transition-all items-center w-1/2"
                 >
-                  Resume <HiDownload className="ml-2" />
-                </a>
+                  {" "}
+                  Resume
+                  <span className="ml-2">
+                    <HiDownload />
+                  </span>
+                </Button>
               </li>
             </ul>
           </motion.div>
