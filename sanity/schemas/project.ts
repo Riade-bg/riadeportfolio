@@ -24,6 +24,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'github',
+      title: 'Github',
+      type: 'string',
+    },
+    {
       name: 'tags',
       title: 'Tags',
       type: 'array',

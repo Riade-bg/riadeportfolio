@@ -8,6 +8,7 @@ async function getProjects() {
                         title,
                             description,
                             link,
+                            github,
                             "imageUrl": image.asset->url,
                             tags,
                             _id}`;
@@ -20,6 +21,7 @@ interface Data {
   title: string;
   description: string;
   link: string;
+  github: string;
   _id: string;
   imageUrl: string;
   tags: string[];
@@ -53,6 +55,8 @@ const Work = async () => {
         <Projects
           key={item._id}
           title={item.title}
+          link={item.link}
+          github={item.github}
           desc={item.description}
           imgUrl={item.imageUrl}
           tags={item.tags}

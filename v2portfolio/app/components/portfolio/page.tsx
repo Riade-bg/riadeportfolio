@@ -25,7 +25,10 @@ const Projects: React.FC<ProjectsProps> = ({
 }) => {
   const router = useRouter();
   return (
-    <div className="grid grid-cols-12 relative md:none last:mb-0 mb-10" key={title}>
+    <div
+      className="grid grid-cols-12 relative md:none last:mb-0 mb-10"
+      key={title}
+    >
       <div
         className="hidden relative md:block col-span-12 md:col-span-7
         hover:before:bg-transparent before:transition before:h-full before:w-full before:content-[''] before:bg-blue-500/40 before:absolute before:z-10"
@@ -76,12 +79,12 @@ const Projects: React.FC<ProjectsProps> = ({
         <div className="flex md:m-4 dark:text-[#e6f1ff] cursor-pointer hover:text-blue-500">
           <FiExternalLink
             className={"mr-4"}
-            onClick={() => router.push("/")}
+            onClick={() => router.push(link)}
             size={24}
           />
           <AiFillGithub
             className={""}
-            onClick={() => router.push("/")}
+            onClick={() => router.push(github)}
             size={24}
           />
         </div>

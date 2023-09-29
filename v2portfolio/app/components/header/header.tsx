@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import Link from "next/link";
 const Header = () => {
   return (
     <>
@@ -21,20 +22,33 @@ const Header = () => {
         </p>
         <div className="flex gap-4">
           <Button className="rounded-none">My Resume</Button>
-          <Button className="rounded-none">Linkedin Profile</Button>
+          <Link
+            href="https://www.linkedin.com/in/riadeboughaba"
+            passHref
+            target="_blank"
+          >
+            <Button className="rounded-none">Linkedin Profile</Button>
+          </Link>
         </div>
       </div>
       <div className="hidden md:block">
         <div
           className="h-1/2 fixed flex flex-col top-[50%] left-14 
-            after:absolute after:h-20 after:w-1 after:w-[0.5px] after:bg-blue-500 after:bottom-0 after:left-3"
+            after:absolute after:h-20 after:w-[0.5px] after:bg-blue-500 after:bottom-0 after:left-3"
         >
-          <p className="hover:text-blue-500 transition-all cursor-pointer mb-5">
-            <AiFillGithub size={26} />
-          </p>
-          <p className="hover:text-blue-500 transition-all cursor-pointer mb-10">
-            <AiFillLinkedin size={26} />
-          </p>
+          <Link href="https://github.com/Riade-bg" target="_blank">
+            <p className="hover:text-blue-500 transition-all cursor-pointer mb-5">
+              <AiFillGithub size={26} />
+            </p>
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/riadeboughaba"
+            target="_blank"
+          >
+            <p className="hover:text-blue-500 transition-all cursor-pointer mb-10">
+              <AiFillLinkedin size={26} />
+            </p>
+          </Link>
         </div>
         <div
           className="h-1/2 fixed flex flex-col top-[50%] right-0 font-mono
