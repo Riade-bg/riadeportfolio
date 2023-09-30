@@ -32,13 +32,7 @@ const Projects: React.FC<ProjectsProps> = ({
         className="hidden relative md:block col-span-12 md:col-span-7
         hover:before:bg-transparent before:transition before:h-full before:w-full before:content-[''] before:bg-blue-500/40 before:absolute before:z-10"
       >
-        <img
-          className="w-full"
-          src={
-            "https://v4.brittanychiang.com/static/3b4d6e8f44baf7e6d7a0ed4b3e4d8d39/f47db/halcyon.avif"
-          }
-          alt={title}
-        />
+        <img className="w-full" src={imgUrl} alt={title} />
       </div>
       <style jsx>
         {`
