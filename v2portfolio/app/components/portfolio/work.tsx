@@ -49,7 +49,7 @@ const Work = async () => {
                         justify-start w-full font-mono
                         text-3xl dark:text-blue-500 light:text-[#0a192f] mb-10"
       >
-        03. My Work
+        02. My Work
       </h1>
       {data.map(item => (
         <Projects

@@ -14,7 +14,7 @@ const Contact = () => {
                     justify-center font-mono md:mt-0 mb-10
                     text-lg text-center w-full"
       >
-        04. What's Next?
+        03. What's Next?
       </p>
       <h1 className="text-5xl font-fira">Contact</h1>
       <p className="text-center md:w-1/2 my-10">
