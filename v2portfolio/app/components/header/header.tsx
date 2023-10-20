@@ -17,8 +17,8 @@ const Header = () => {
           & I build web interfaces.
         </h2>
         <p className="my-5 md:my-8 w-full lg:w-2/3 text-center md:text-start text-base md:text-lg">
-          I'm a junior front-end web debeloper specializing in building (and
-          designing) exceptional web interfaces using ReactJS.
+          A web debeloper specializing in building (and designing) exceptional
+          web interfaces using NextJS.
         </p>
         <div className="flex gap-4">
           <a href="/Lebenslauf..pdf" target="_blank" rel="noreferrer">

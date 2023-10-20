@@ -30,17 +30,15 @@ const About = () => {
         </h1>
         <div className="light:text-[#0a192f] text-base">
           <p className="text-start mb-6 leading-relaxed font-poppins">
-            Hello! My name is Riade and I enjoy creating things that live on the
-            internet. My interest in front-end web development started back in
-            2012 when I decided to try editing custom templates — turns out
-            inspecting a custom reblog button taught me a lot about HTML & CSS!
-            Fast-forward to today, and I've had the privilege of working as a{" "}
-            <span className="text-sky-500 font-bold">
-              freelance developer and a developer at student-organization in my
-              university as front-end web developer.{" "}
-            </span>{" "}
-            My main focus these days is building accessible, inclusive front-end
-            interfaces and digital experiences for a variety of clients.
+            Greetings! I'm Riade, and I'm passionate about crafting digital
+            experiences on the web. My journey into the world of front-end web
+            development commenced in 2015 when I delved into custom template
+            editing. Surprisingly, dissecting a bespoke blog template provided
+            me with invaluable insights into HTML and CSS. Fast-forward to the
+            present, and I've been fortunate to build a career in this exciting
+            field. My main focus these days is building accessible, inclusive
+            front-end interfaces and digital experiences for a variety of
+            clients.
           </p>
           <p className="text-start mb-6 leading-relaxed font-poppins">
             Here are technologies I've been working with recently:
