@@ -8,9 +8,9 @@ import React from "react";
 import { useRouter } from "@/node_modules/next/navigation";
 
 interface ProjectsProps {
-  title?: string;
-  desc?: string;
-  link?: string;
+  title: string;
+  desc: string;
+  link: string;
   github?: string;
   imgUrl?: string;
   tags: string[];
