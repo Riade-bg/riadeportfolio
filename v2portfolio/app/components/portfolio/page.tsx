@@ -59,7 +59,7 @@ const Projects: React.FC<ProjectsProps> = ({
         className={`on-the-fly-behavior h-[500px] md:h-full p-10 md:p-0 col-span-12 md:col-span-5 flex flex-col items-start md:items-end justify-center`}
       >
         <h1 className="text-2xl mt-10 md:mt-0 font-mono font-bold">{title}</h1>
-        <p className="text-start md:text-end my-5 text-base dark:text-[#a8b2d1] md:bg-[#0a192f] shadow-lg md:px-5 py-2 md:-ml-40 md:z-20">
+        <p className="text-start md:text-end my-5 text-base bg-white text-[#a8b2d1] dark:bg-[#0a192f] shadow-lg px-5 py-2 md:-ml-40 md:z-20">
           {desc}
         </p>
         <ul className="flex flex-wrap text-sm font-mono dark:text-[#e6f1ff]">

@@ -19,104 +19,106 @@ const Navbar = () => {
   const router = useRouter();
   const { setTheme } = useTheme();
   return (
-    <Headroom>
-      <nav className="z-10 w-full top-0 flex flex-1 justify-between items-center px-10 md:px-24 py-5 backdrop-blur">
-        <div className="border-blue-500 transition-ll border-2">
-          <h1
-            onClick={() => router.push("/")}
-            className="px-3 py-1 transition hover:text-blue-500 
+    <>
+      <Headroom>
+        <nav className="z-10 w-full top-0 flex flex-1 justify-between items-center px-10 md:px-24 py-5 backdrop-blur">
+          <div className="border-blue-500 transition-ll border-2">
+            <h1
+              onClick={() => router.push("/")}
+              className="px-3 py-1 transition hover:text-blue-500 
                     text-lg font-bold cursor-pointer"
-          >
-            R
-          </h1>
-        </div>
-        <ul className="flex dark:text-gray-300 text-sm font-mono items-center">
-          {[
-            {
-              index: "01.",
-              link: "About",
-              id: "about"
-            },
-            {
-              index: "02.",
-              link: "Work",
-              id: "work"
-            },
-            {
-              index: "03.",
-              link: "Contact",
-              id: "contact"
-            }
-          ].map((item, index) => (
-            <li
-              key={index}
-              className="cursor-pointer hover:text-blue-500 mr-10 capitalize hidden md:flex items-center transition-all"
             >
-              <Link
-                activeClass={"text-blue-500"}
-                to={item.id}
-                spy={true}
-                offset={50}
-                smooth={true}
-                duration={500}
-                className="flex"
+              R
+            </h1>
+          </div>
+          <ul className="flex dark:text-gray-300 text-sm font-mono items-center">
+            {[
+              {
+                index: "01.",
+                link: "About",
+                id: "about"
+              },
+              {
+                index: "02.",
+                link: "Work",
+                id: "work"
+              },
+              {
+                index: "03.",
+                link: "Contact",
+                id: "contact"
+              }
+            ].map((item, index) => (
+              <li
+                key={index}
+                className="cursor-pointer hover:text-blue-500 mr-10 capitalize hidden md:flex items-center transition-all"
               >
-                <span className="text-blue-500 mr-1">{item.index}</span>
-                <p>{item.link}</p>
-              </Link>
-            </li>
-          ))}
-          <li>
-            <a href="/Lebenslauf..pdf" target="_blank" rel="noreferrer">
-              <Button
-                variant={"outline"}
-                className="hidden md:flex px-5 py-2 text-sm text-blue-500 rounded-none border border-blue-500 
+                <Link
+                  activeClass={"text-blue-500"}
+                  to={item.id}
+                  spy={true}
+                  offset={50}
+                  smooth={true}
+                  duration={500}
+                  className="flex"
+                >
+                  <span className="text-blue-500 mr-1">{item.index}</span>
+                  <p>{item.link}</p>
+                </Link>
+              </li>
+            ))}
+            <li>
+              <a href="/Lebenslauf..pdf" target="_blank" rel="noreferrer">
+                <Button
+                  variant={"outline"}
+                  className="hidden md:flex px-5 py-2 text-sm text-blue-500 rounded-none border border-blue-500 
                             font-work hover:bg-blue-500/20 transition-all items-center"
-              >
-                Resume
-                <span className="ml-2">
-                  <HiDownload />
-                </span>
-              </Button>
-            </a>
-          </li>
-          <li>
-            <div className="bg-red-100 flex items-center ml-3">
-              {darkMode && (
-                <Button
-                  variant="secondary"
-                  className="text-black border rounded-none"
-                  size="icon"
-                  onClick={() => {
-                    setTheme("light"), setDarkMode(false);
-                  }}
                 >
-                  <BsSun className="text-white h-[1.2rem] w-[1.2rem] transition-all" />
+                  Resume
+                  <span className="ml-2">
+                    <HiDownload />
+                  </span>
                 </Button>
-              )}
-              {!darkMode && (
-                <Button
-                  variant="secondary"
-                  className="rounded-none"
-                  size="icon"
-                  onClick={() => {
-                    setTheme("dark");
-                    setDarkMode(true);
-                  }}
-                >
-                  <MdOutlineDarkMode className="absolute h-[1.2rem] w-[1.2rem] transition-all" />
-                </Button>
-              )}
-            </div>
-          </li>
-          <li
-            className="md:hidden p-2 cursor-pointer ml-2"
-            onClick={() => setMenu(true)}
-          >
-            <HiMenu className="light:text-black" size={30} />
-          </li>
-        </ul>
-      </nav>
+              </a>
+            </li>
+            <li>
+              <div className="bg-red-100 flex items-center ml-3">
+                {darkMode && (
+                  <Button
+                    variant="secondary"
+                    className="text-black border rounded-none"
+                    size="icon"
+                    onClick={() => {
+                      setTheme("light"), setDarkMode(false);
+                    }}
+                  >
+                    <BsSun className="text-white h-[1.2rem] w-[1.2rem] transition-all" />
+                  </Button>
+                )}
+                {!darkMode && (
+                  <Button
+                    variant="secondary"
+                    className="rounded-none"
+                    size="icon"
+                    onClick={() => {
+                      setTheme("dark");
+                      setDarkMode(true);
+                    }}
+                  >
+                    <MdOutlineDarkMode className="absolute h-[1.2rem] w-[1.2rem] transition-all" />
+                  </Button>
+                )}
+              </div>
+            </li>
+            <li
+              className="md:hidden p-2 cursor-pointer ml-2"
+              onClick={() => setMenu(true)}
+            >
+              <HiMenu className="light:text-black" size={30} />
+            </li>
+          </ul>
+        </nav>
+      </Headroom>
       <AnimatePresence>
         {menu && (
           <motion.div
@@ -124,7 +126,7 @@ const Navbar = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="absolute md:hidden right-0 top-0 dark:bg-[#09192e] backdrop-blur w-screen h-screen z-70 flex justify-end"
+            className="fixed md:hidden right-0 top-0 dark:bg-[#09192e] backdrop-blur w-screen h-screen z-50 flex justify-end"
           >
             <ul className="px-5 right-0 text-gray-300 text-2xl relative h-full w-full bg-[#09192e] flex flex-col items-center justify-center font-work">
               <li
@@ -189,7 +191,7 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </Headroom>
+    </>
   );
 };
 
