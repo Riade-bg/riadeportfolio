@@ -10,7 +10,7 @@ import { HiDownload, HiMenu } from "react-icons/hi";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
-import Link from "react-scroll/modules";
+import {Link} from "react-scroll/modules";
 import Headroom from "react-headroom";
 
 const Navbar = () => {
