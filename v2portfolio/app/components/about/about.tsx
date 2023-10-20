@@ -2,22 +2,22 @@
 
 import Image from "next/image";
 
-import { motion, useScroll } from "framer-motion";
+// import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 
 const About = () => {
-  const ref = useRef<HTMLDivElement>(null);
+  // const ref = useRef<HTMLDivElement>(null);
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "0 0"]
-  });
+  // const { scrollYProgress } = useScroll({
+  //   target: ref,
+  //   offset: ["0 1", "0 0"]
+  // });
 
   return (
-    <motion.div
+    <div
       id="about"
-      ref={ref}
-      style={{ opacity: scrollYProgress }}
+      // ref={ref}
+      // style={{ opacity: scrollYProgress }}
       className="w-full flex flex-col md:flex-row justify-center items-center md:px-10 pt-20"
     >
       <div className="w-full md:w-[550px] p-10 light:text-[#0a192f]">
@@ -30,15 +30,15 @@ const About = () => {
         </h1>
         <div className="light:text-[#0a192f] text-base">
           <p className="text-start mb-6 leading-relaxed font-poppins">
-            Greetings! I&apos;m Riade, and I&apos;m passionate about crafting digital
-            experiences on the web. My journey into the world of front-end web
-            development commenced in 2015 when I delved into custom template
-            editing. Surprisingly, dissecting a bespoke blog template provided
-            me with invaluable insights into HTML and CSS. Fast-forward to the
-            present, and I&apos;ve been fortunate to build a career in this exciting
-            field. My main focus these days is building accessible, inclusive
-            front-end interfaces and digital experiences for a variety of
-            clients.
+            Greetings! I&apos;m Riade, and I&apos;m passionate about crafting
+            digital experiences on the web. My journey into the world of
+            front-end web development commenced in 2015 when I delved into
+            custom template editing. Surprisingly, dissecting a bespoke blog
+            template provided me with invaluable insights into HTML and CSS.
+            Fast-forward to the present, and I&apos;ve been fortunate to build a
+            career in this exciting field. My main focus these days is building
+            accessible, inclusive front-end interfaces and digital experiences
+            for a variety of clients.
           </p>
           <p className="text-start mb-6 leading-relaxed font-poppins">
             Here are technologies I&apos;ve been working with recently:
@@ -77,7 +77,7 @@ const About = () => {
           alt="Picture of the author"
         />
       </div>
-    </motion.div>
+    </div>
   );
 };
 

@@ -5,7 +5,7 @@ import Header from "./components/header/header";
 import Navbar from "./components/navbar/navbar";
 import About from "./components/about/about";
 
-import Work from "./components/portfolio/work";
+import Work from "./components/portfolio/page";
 import Contact from "./components/contact/contact";
 
 export default function Home() {
