@@ -21,7 +21,9 @@ const Header = () => {
           designing) exceptional web interfaces using ReactJS.
         </p>
         <div className="flex gap-4">
-          <Button className="rounded-none">My Resume</Button>
+          <a href="/Lebenslauf..pdf" target="_blank" rel="noreferrer">
+            <Button className="rounded-none">My Resume</Button>
+          </a>
           <Link
             href="https://www.linkedin.com/in/riadeboughaba"
             passHref

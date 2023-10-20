@@ -67,16 +67,18 @@ const Navbar = () => {
             </li>
           ))}
           <li>
-            <Button
-              variant={"outline"}
-              className="hidden md:flex px-5 py-2 text-sm text-blue-500 rounded-none border border-blue-500 
+            <a href="/Lebenslauf..pdf" target="_blank" rel="noreferrer">
+              <Button
+                variant={"outline"}
+                className="hidden md:flex px-5 py-2 text-sm text-blue-500 rounded-none border border-blue-500 
                             font-work hover:bg-blue-500/20 transition-all items-center"
-            >
-              Resume
-              <span className="ml-2">
-                <HiDownload />
-              </span>
-            </Button>
+              >
+                Resume
+                <span className="ml-2">
+                  <HiDownload />
+                </span>
+              </Button>
+            </a>
           </li>
           <li>
             <div className="bg-red-100 flex items-center ml-3">
@@ -122,7 +124,7 @@ const Navbar = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed right-0 top-0 dark:bg-[#09192e] backdrop-blur w-screen h-screen z-30 flex justify-end"
+            className="absolute md:hidden right-0 top-0 dark:bg-[#09192e] backdrop-blur w-screen h-screen z-70 flex justify-end"
           >
             <ul className="px-5 right-0 text-gray-300 text-2xl relative h-full w-full bg-[#09192e] flex flex-col items-center justify-center font-work">
               <li
@@ -134,37 +136,54 @@ const Navbar = () => {
               {[
                 {
                   index: "01.",
-                  link: "About"
+                  link: "About",
+                  id: "about"
                 },
                 {
                   index: "02.",
-                  link: "Work"
+                  link: "Work",
+                  id: "work"
                 },
                 {
                   index: "03.",
-                  link: "Contact"
+                  link: "Contact",
+                  id: "contact"
                 }
               ].map((item, index) => (
-                <li
-                  key={index}
-                  className="mb-5 hover:text-blue-500 text-mono capitalize flex flex-col items-center transition-all"
-                  onClick={() => setMenu(false)}
+                <Link
+                  activeClass={"text-blue-500"}
+                  to={item.id}
+                  spy={true}
+                  offset={50}
+                  smooth={true}
+                  duration={500}
+                  className="flex"
                 >
-                  <span className="text-blue-500 text-base">{item.index}</span>
-                  <a href={`#${item.link}`}>{item.link}</a>
-                </li>
+                  <li
+                    key={index}
+                    className="mb-5 hover:text-blue-500 text-mono capitalize flex flex-col items-center transition-all"
+                    onClick={() => setMenu(false)}
+                  >
+                    <span className="text-blue-500 text-base">
+                      {item.index}
+                    </span>
+                    <a href={`#${item.link}`}>{item.link}</a>
+                  </li>
+                </Link>
               ))}
               <li className="w-full">
-                <Button
-                  className="mx-auto flex px-5 py-2 text-sm text-white rounded-none border border-blue-500 
+                <a href="/Lebenslauf..pdf" target="_blank" rel="noreferrer">
+                  <Button
+                    className="mx-auto flex px-5 py-2 text-sm text-white rounded-none border border-blue-500 
                                   font-work bg-blue-500 transition-all items-center w-1/2"
-                >
-                  {" "}
-                  Resume
-                  <span className="ml-2">
-                    <HiDownload />
-                  </span>
-                </Button>
+                  >
+                    {" "}
+                    Resume
+                    <span className="ml-2">
+                      <HiDownload />
+                    </span>
+                  </Button>
+                </a>
               </li>
             </ul>
           </motion.div>

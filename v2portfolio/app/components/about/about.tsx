@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 
@@ -70,7 +72,12 @@ const About = () => {
         </div>
       </div>
       <div className="w-full md:w-1/3 p-1 top-1/2 flex justify-center">
-        <img src={"https://placehold.co/400x400"} alt={"Profile"} />
+        <Image
+          src="/Bild.jpg"
+          width={400}
+          height={400}
+          alt="Picture of the author"
+        />
       </div>
     </motion.div>
   );
