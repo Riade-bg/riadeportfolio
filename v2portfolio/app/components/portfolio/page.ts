@@ -14,7 +14,7 @@ interface ProjectsProps {
   github?: string;
   imgUrl?: string;
   tags: string[];
-}
+};
 
 const Projects: React.FC<ProjectsProps> = ({
   title,
