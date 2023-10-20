@@ -1,3 +1,5 @@
+"use client";
+
 import { AiFillGithub } from "react-icons/ai";
 import { FiExternalLink } from "react-icons/fi";
 import Link from "next/link";
